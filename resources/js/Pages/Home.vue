@@ -1,18 +1,23 @@
 <template>
-    <h1>Home {{ name }} </h1>
 
-    <ul>
-        <li v-for="framework of frameworks" v-text="framework"></li>
-    </ul>
-    <Nav />
+  <Layout>
+
+
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
+
+  </Layout>
+
+
 </template>
 
 <script>
-import { Link} from "@inertiajs/inertia-vue3";
-import Nav from '../Shared/Nav';
+
+import Layout from "../Shared/Layout";
 
 export default {
-    components: { Nav , Link},
+    components: {Layout },
 
     props: {
         name: String,

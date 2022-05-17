@@ -14,14 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return inertia('Home', [
         'name' => 'Toby',
         'frameworks' => ['1','2']
     ]);
 });
 Route::get('/users', function () {
-    return inertia('Users', [    ]);
+    sleep(0.1);
+    return inertia('Users', [
+        'time' => now()->toTimeString()
+    ]);
 });
 Route::get('/settings', function () {
     return inertia('Settings', [    ]);
+});
+
+Route::post('/logout', function () {
+   dd('logging the users out');
 });

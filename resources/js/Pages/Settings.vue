@@ -1,13 +1,29 @@
 <template>
-    <h1>Settings </h1>
+
+    <Layout>
+
+
+        <h1 class="text-3xl font-bold underline">
+            Hello world!
+        </h1>
+
+    </Layout>
 
 
 </template>
 
 <script>
+
+import Layout from "../Shared/Layout";
+
 export default {
-    name: "Settings"
-}
+    components: {Layout },
+
+    props: {
+        name: String,
+        frameworks: Array
+    }
+};
 </script>
 
 <style scoped>
